@@ -1,0 +1,36 @@
+# Canonical-extraction config: segment 3 of 6 cut from ONE recording. Times are seconds of MCAP log_time
+# relative to the first message of the bag -- the clock burned into the head-camera preview MP4.
+episode_id: rec_20260821_052219_d4f4fc76
+record_id: rec_20260821_052219_d4f4fc76
+segment: 3
+actual_date: "2026-09-14"            # as supplied by the user
+mcap: data/raw/rec_20260821_052219_d4f4fc76/rec_20260821_052219_d4f4fc76_0.mcap
+
+# Supplied by the user 2026-09-14 (not inferred).
+prompt: "Remove the red cylinder from the green cylinder."
+success: true
+
+trim:                # supplied by the user 2026-09-14 (chosen from the full-recording head preview MP4)
+  start_s: 93.5
+  end_s: 105
+
+rate_hz: 15
+
+align:
+  proprio: hold
+  action: next
+  camera: hold
+
+tolerances:
+  proprio_max_age_s: 0.05
+  action_max_lead_s: 0.10
+  camera_max_age_s: 0.06
+  fail_on_violation: false
+
+cameras:
+  left:  {eye: right, resize: null}
+  right: {eye: left, resize: null}
+  head:  {eye: left, resize: [960, 960]}
+jpeg_quality: 95
+
+output_root: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical

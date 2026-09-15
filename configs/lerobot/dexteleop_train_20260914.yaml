@@ -1,0 +1,7 @@
+# training dataset 'dexteleop_train' -- generated 2026-09-14 by build_dataset.py from recordings: rec_20260821_052219_d4f4fc76   held out: [('rec_20260821_052219_d4f4fc76', 6)]
+# 5 success segments, 859 rows
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t15-30_hz15   # rec_20260821_052219_d4f4fc76 seg01 15-30s 'Stack the red cylinder on the green cylinder.'
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t82-93_hz15   # rec_20260821_052219_d4f4fc76 seg02 82-93s 'Stack the red cylinder on the green cylinder.'
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t93.5-105_hz15   # rec_20260821_052219_d4f4fc76 seg03 93.5-105s 'Remove the red cylinder from the green cylinder.'
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t105.5-116_hz15   # rec_20260821_052219_d4f4fc76 seg04 105.5-116s 'Stack the red cylinder on the green cylinder.'
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t116-125_hz15   # rec_20260821_052219_d4f4fc76 seg05 116-125s 'Remove the red cylinder from the green cylinder.'

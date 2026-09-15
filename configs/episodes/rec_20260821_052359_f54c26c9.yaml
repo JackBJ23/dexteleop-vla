@@ -1,0 +1,34 @@
+# Canonical-extraction config for one DexTeleop episode. Times are seconds relative to the MCAP's
+# message_start_time (== rosbag2 metadata starting_time), i.e. ORIGINAL MCAP log_time.
+# NOTE: the legacy Mac-side visualization/dataset clock is +0.86 s vs MCAP time; the task interval was
+# annotated as 125-210 on that clock, hence 125.86-210.86 here (decision 2026-09-11).
+episode_id: rec_20260821_052359_f54c26c9
+mcap: data/raw/rec_20260821_052359_f54c26c9/rec_20260821_052359_f54c26c9_0.mcap
+
+# REQUIRED before any policy training. null => extractor records the blocker in meta/validation.
+prompt: "Insert the red cylinder onto the vertical peg."
+
+trim:
+  start_s: 125.86
+  end_s: 210.86
+
+rate_hz: 15            # target grid rate; nothing downstream may assume 15 or 45
+
+align:                 # see dexteleop/sync.py for exact semantics
+  proprio: hold        # latest measurement at or before the tick
+  action: next         # earliest command at or after the tick (what the operator sent from now on)
+  camera: hold         # latest frame received at or before the tick
+
+tolerances:            # violations are counted and reported; `fail_on_violation` aborts the write
+  proprio_max_age_s: 0.05
+  action_max_lead_s: 0.10
+  camera_max_age_s: 0.06
+  fail_on_violation: false
+
+cameras:               # all three streams are side-by-side stereo; pick one eye for the canonical frame
+  left:  {eye: right, resize: null}         # 1280x800; RIGHT eye = inner eye = what the robot client feeds at deployment
+  right: {eye: left, resize: null}
+  head:  {eye: left, resize: [960, 960]}    # 1920x1920 native per eye (fisheye)
+jpeg_quality: 95
+
+output_root: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical

@@ -1,0 +1,34 @@
+# Raw / generated robot data
+data/raw/
+data/interim/
+data/lerobot/
+*.mcap
+*.mp4
+*.zip
+
+# Training outputs / checkpoints
+outputs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# External repos / environments
+third_party/openpi/
+.venv/
+venv/
+
+# Caches / experiment logs
+wandb/
+__pycache__/
+*.pyc
+.cache/
+.DS_Store
+
+# session / job bookkeeping
+.pytest_cache/
+sbatch/out.*
+sbatch/err.*
+sbatch/.*_jid
+sbatch/.*.log
+reports/*_inspection.json

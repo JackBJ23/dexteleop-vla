@@ -1,0 +1,35 @@
+# Canonical-extraction config. Times are seconds of MCAP log_time relative to message_start_time
+# (== rosbag2 metadata starting_time) -- the clock burned into the preview MP4.
+episode_id: rec_20260821_035532_74a3cb58
+record_id: rec_20260821_035532_74a3cb58
+actual_date: "2026-09-14"            # as supplied by the user
+mcap: data/raw/rec_20260821_035532_74a3cb58/rec_20260821_035532_74a3cb58_0.mcap
+
+# Supplied by the user 2026-09-14 (not inferred).
+prompt: "Insert the cylinder from the left peg into the right peg."
+success: true
+
+trim:                # supplied by the user 2026-09-14 (chosen from the full-recording preview MP4)
+  start_s: 10.0
+  end_s: 28.0
+
+rate_hz: 15
+
+align:
+  proprio: hold
+  action: next
+  camera: hold
+
+tolerances:
+  proprio_max_age_s: 0.05
+  action_max_lead_s: 0.10
+  camera_max_age_s: 0.06
+  fail_on_violation: false
+
+cameras:
+  left:  {eye: right, resize: null}
+  right: {eye: left, resize: null}
+  head:  {eye: left, resize: [960, 960]}
+jpeg_quality: 95
+
+output_root: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical

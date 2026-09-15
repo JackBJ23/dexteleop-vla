@@ -1,0 +1,2345 @@
+##### /can0/error_code  (robstride_actuator_bridge/msg/ErrorCode)
+std_msgs/Header header
+float32[] temp
+int8[] error_code
+int8[] pattern
+int8[] motor_mode
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can0/motor_cmd  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can0/motor_states  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can1/error_code  (robstride_actuator_bridge/msg/ErrorCode)
+std_msgs/Header header
+float32[] temp
+int8[] error_code
+int8[] pattern
+int8[] motor_mode
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can1/motor_cmd  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can1/motor_states  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can2/error_code  (robstride_actuator_bridge/msg/ErrorCode)
+std_msgs/Header header
+float32[] temp
+int8[] error_code
+int8[] pattern
+int8[] motor_mode
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can2/motor_cmd  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can2/motor_states  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can3/error_code  (robstride_actuator_bridge/msg/ErrorCode)
+std_msgs/Header header
+float32[] temp
+int8[] error_code
+int8[] pattern
+int8[] motor_mode
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can3/motor_cmd  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can3/motor_states  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can4/error_code  (robstride_actuator_bridge/msg/ErrorCode)
+std_msgs/Header header
+float32[] temp
+int8[] error_code
+int8[] pattern
+int8[] motor_mode
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can4/motor_cmd  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /can4/motor_states  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /chassis/error_code  (robstride_actuator_bridge/msg/ErrorCode)
+std_msgs/Header header
+float32[] temp
+int8[] error_code
+int8[] pattern
+int8[] motor_mode
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /chassis/joint_cmd  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /chassis/joint_states  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /chassis_target_vel  (std_msgs/msg/Float32MultiArray)
+# This was originally provided as an example message.
+# It is deprecated as of Foxy
+# It is recommended to create your own semantically meaningful message.
+# However if you would like to continue using this please use the equivalent in example_msgs.
+
+# Please look at the MultiArrayLayout message definition for
+# documentation on all multiarrays.
+
+MultiArrayLayout  layout        # specification of data layout
+float32[]         data          # array of data
+
+================================================================================
+MSG: std_msgs/MultiArrayLayout
+# This was originally provided as an example message.
+# It is deprecated as of Foxy
+# It is recommended to create your own semantically meaningful message.
+# However if you would like to continue using this please use the equivalent in example_msgs.
+
+# The multiarray declares a generic multi-dimensional array of a
+# particular data type.  Dimensions are ordered from outer most
+# to inner most.
+#
+# Accessors should ALWAYS be written in terms of dimension stride
+# and specified outer-most dimension first.
+#
+# multiarray(i,j,k) = data[data_offset + dim_stride[1]*i + dim_stride[2]*j + k]
+#
+# A standard, 3-channel 640x480 image with interleaved color channels
+# would be specified as:
+#
+# dim[0].label  = "height"
+# dim[0].size   = 480
+# dim[0].stride = 3*640*480 = 921600  (note dim[0] stride is just size of image)
+# dim[1].label  = "width"
+# dim[1].size   = 640
+# dim[1].stride = 3*640 = 1920
+# dim[2].label  = "channel"
+# dim[2].size   = 3
+# dim[2].stride = 3
+#
+# multiarray(i,j,k) refers to the ith row, jth column, and kth channel.
+
+MultiArrayDimension[] dim # Array of dimension properties
+uint32 data_offset        # padding bytes at front of data
+
+================================================================================
+MSG: std_msgs/MultiArrayDimension
+# This was originally provided as an example message.
+# It is deprecated as of Foxy
+# It is recommended to create your own semantically meaningful message.
+# However if you would like to continue using this please use the equivalent in example_msgs.
+
+string label   # label of given dimension
+uint32 size    # size of given dimension (in type units)
+uint32 stride  # stride of given dimension
+
+
+##### /fsm_state  (std_msgs/msg/Int32)
+# This was originally provided as an example message.
+# It is deprecated as of Foxy
+# It is recommended to create your own semantically meaningful message.
+# However if you would like to continue using this please use the equivalent in example_msgs.
+
+int32 data
+
+
+##### /head_position  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /kinco/actual_position  (std_msgs/msg/Float64)
+# This was originally provided as an example message.
+# It is deprecated as of Foxy
+# It is recommended to create your own semantically meaningful message.
+# However if you would like to continue using this please use the equivalent in example_msgs.
+
+float64 data
+
+
+##### /kinco/actual_velocity  (std_msgs/msg/Float64)
+# This was originally provided as an example message.
+# It is deprecated as of Foxy
+# It is recommended to create your own semantically meaningful message.
+# However if you would like to continue using this please use the equivalent in example_msgs.
+
+float64 data
+
+
+##### /kinco/cmd_enable  (std_msgs/msg/Bool)
+# This was originally provided as an example message.
+# It is deprecated as of Foxy
+# It is recommended to create your own semantically meaningful message.
+# However if you would like to continue using this please use the equivalent in example_msgs.
+
+bool data
+
+
+##### /kinco/cmd_mode  (std_msgs/msg/String)
+# This was originally provided as an example message.
+# It is deprecated as of Foxy
+# It is recommended to create your own semantically meaningful message.
+# However if you would like to continue using this please use the equivalent in example_msgs.
+
+string data
+
+
+##### /kinco/cmd_velocity  (std_msgs/msg/Float64)
+# This was originally provided as an example message.
+# It is deprecated as of Foxy
+# It is recommended to create your own semantically meaningful message.
+# However if you would like to continue using this please use the equivalent in example_msgs.
+
+float64 data
+
+
+##### /kinco/motor_state  (std_msgs/msg/String)
+# This was originally provided as an example message.
+# It is deprecated as of Foxy
+# It is recommended to create your own semantically meaningful message.
+# However if you would like to continue using this please use the equivalent in example_msgs.
+
+string data
+
+
+##### /left/color/image_raw/ffmpeg  (ffmpeg_image_transport_msgs/msg/FFMPEGPacket)
+std_msgs/Header header
+int32 width       # original image width
+int32 height      # original image height
+string encoding	  # encoding used
+uint64 pts        # packet pts
+uint8  flags      # packet flags
+bool is_bigendian # true if machine stores in big endian format
+uint8[] data      # ffmpeg compressed payload
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /left_arm/current_ee_pose  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /left_arm/error_code  (robstride_actuator_bridge/msg/ErrorCode)
+std_msgs/Header header
+float32[] temp
+int8[] error_code
+int8[] pattern
+int8[] motor_mode
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /left_arm/joint_cmd  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /left_arm/joint_states  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /left_arm/target_ee_pose  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /left_gripper/error_code  (robstride_actuator_bridge/msg/ErrorCode)
+std_msgs/Header header
+float32[] temp
+int8[] error_code
+int8[] pattern
+int8[] motor_mode
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /left_gripper/joint_cmd  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /left_gripper/joint_states  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /left_hand_position  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /left_shoulder_position  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /left_target_ee_pose  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /left_wrist_position  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /right/color/image_raw/ffmpeg  (ffmpeg_image_transport_msgs/msg/FFMPEGPacket)
+std_msgs/Header header
+int32 width       # original image width
+int32 height      # original image height
+string encoding	  # encoding used
+uint64 pts        # packet pts
+uint8  flags      # packet flags
+bool is_bigendian # true if machine stores in big endian format
+uint8[] data      # ffmpeg compressed payload
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /right_arm/current_ee_pose  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /right_arm/error_code  (robstride_actuator_bridge/msg/ErrorCode)
+std_msgs/Header header
+float32[] temp
+int8[] error_code
+int8[] pattern
+int8[] motor_mode
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /right_arm/joint_cmd  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /right_arm/joint_states  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /right_arm/target_ee_pose  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /right_gripper/error_code  (robstride_actuator_bridge/msg/ErrorCode)
+std_msgs/Header header
+float32[] temp
+int8[] error_code
+int8[] pattern
+int8[] motor_mode
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /right_gripper/joint_cmd  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /right_gripper/joint_states  (sensor_msgs/msg/JointState)
+# This is a message that holds data to describe the state of a set of torque controlled joints.
+#
+# The state of each joint (revolute or prismatic) is defined by:
+#  * the position of the joint (rad or m),
+#  * the velocity of the joint (rad/s or m/s) and
+#  * the effort that is applied in the joint (Nm or N).
+#
+# Each joint is uniquely identified by its name
+# The header specifies the time at which the joint states were recorded. All the joint states
+# in one message have to be recorded at the same time.
+#
+# This message consists of a multiple arrays, one for each part of the joint state.
+# The goal is to make each of the fields optional. When e.g. your joints have no
+# effort associated with them, you can leave the effort array empty.
+#
+# All arrays in this message should have the same size, or be empty.
+# This is the only way to uniquely associate the joint name with the correct
+# states.
+
+std_msgs/Header header
+
+string[] name
+float64[] position
+float64[] velocity
+float64[] effort
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /right_hand_position  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /right_shoulder_position  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /right_target_ee_pose  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /right_wrist_position  (geometry_msgs/msg/Pose)
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /tf  (tf2_msgs/msg/TFMessage)
+geometry_msgs/TransformStamped[] transforms
+
+================================================================================
+MSG: geometry_msgs/TransformStamped
+# This expresses a transform from coordinate frame header.frame_id
+# to the coordinate frame child_frame_id at the time of header.stamp
+#
+# This message is mostly used by the
+# <a href="https://index.ros.org/p/tf2/">tf2</a> package.
+# See its documentation for more information.
+#
+# The child_frame_id is necessary in addition to the frame_id
+# in the Header to communicate the full reference for the transform
+# in a self contained message.
+
+# The frame id in the header is used as the reference frame of this transform.
+std_msgs/Header header
+
+# The frame id of the child frame to which this transform points.
+string child_frame_id
+
+# Translation and rotation in 3-dimensions of child_frame_id from header.frame_id.
+Transform transform
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+================================================================================
+MSG: geometry_msgs/Transform
+# This represents the transform between two coordinate frames in free space.
+
+Vector3 translation
+Quaternion rotation
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space.
+
+# This is semantically different than a point.
+# A vector is always anchored at the origin.
+# When a transform is applied to a vector, only the rotational component is applied.
+
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /tf_static  (tf2_msgs/msg/TFMessage)
+geometry_msgs/TransformStamped[] transforms
+
+================================================================================
+MSG: geometry_msgs/TransformStamped
+# This expresses a transform from coordinate frame header.frame_id
+# to the coordinate frame child_frame_id at the time of header.stamp
+#
+# This message is mostly used by the
+# <a href="https://index.ros.org/p/tf2/">tf2</a> package.
+# See its documentation for more information.
+#
+# The child_frame_id is necessary in addition to the frame_id
+# in the Header to communicate the full reference for the transform
+# in a self contained message.
+
+# The frame id in the header is used as the reference frame of this transform.
+std_msgs/Header header
+
+# The frame id of the child frame to which this transform points.
+string child_frame_id
+
+# Translation and rotation in 3-dimensions of child_frame_id from header.frame_id.
+Transform transform
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+================================================================================
+MSG: geometry_msgs/Transform
+# This represents the transform between two coordinate frames in free space.
+
+Vector3 translation
+Quaternion rotation
+
+================================================================================
+MSG: geometry_msgs/Vector3
+# This represents a vector in free space.
+
+# This is semantically different than a point.
+# A vector is always anchored at the origin.
+# When a transform is applied to a vector, only the rotational component is applied.
+
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /xr/hmd_pose  (geometry_msgs/msg/PoseStamped)
+# A Pose with reference coordinate frame and timestamp
+
+std_msgs/Header header
+Pose pose
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+================================================================================
+MSG: geometry_msgs/Pose
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /xr/left_aim_pose  (geometry_msgs/msg/PoseStamped)
+# A Pose with reference coordinate frame and timestamp
+
+std_msgs/Header header
+Pose pose
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+================================================================================
+MSG: geometry_msgs/Pose
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /xr/left_hand_inputs  (sensor_msgs/msg/Joy)
+# Reports the state of a joystick's axes and buttons.
+
+# The timestamp is the time at which data is received from the joystick.
+std_msgs/Header header
+
+# The axes measurements from a joystick.
+float32[] axes
+
+# The buttons measurements from a joystick.
+int32[] buttons
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /xr/right_aim_pose  (geometry_msgs/msg/PoseStamped)
+# A Pose with reference coordinate frame and timestamp
+
+std_msgs/Header header
+Pose pose
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+================================================================================
+MSG: geometry_msgs/Pose
+# A representation of pose in free space, composed of position and orientation.
+
+Point position
+Quaternion orientation
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+
+================================================================================
+MSG: geometry_msgs/Quaternion
+# This represents an orientation in free space in quaternion form.
+
+float64 x 0
+float64 y 0
+float64 z 0
+float64 w 1
+
+
+##### /xr/right_hand_inputs  (sensor_msgs/msg/Joy)
+# Reports the state of a joystick's axes and buttons.
+
+# The timestamp is the time at which data is received from the joystick.
+std_msgs/Header header
+
+# The axes measurements from a joystick.
+float32[] axes
+
+# The buttons measurements from a joystick.
+int32[] buttons
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec
+
+
+##### /xr_video_topic/ffmpeg  (ffmpeg_image_transport_msgs/msg/FFMPEGPacket)
+std_msgs/Header header
+int32 width       # original image width
+int32 height      # original image height
+string encoding	  # encoding used
+uint64 pts        # packet pts
+uint8  flags      # packet flags
+bool is_bigendian # true if machine stores in big endian format
+uint8[] data      # ffmpeg compressed payload
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data
+# in a particular coordinate frame.
+
+# Two-integer timestamp that is expressed as seconds and nanoseconds.
+builtin_interfaces/Time stamp
+
+# Transform frame with which this data is associated.
+string frame_id
+
+================================================================================
+MSG: builtin_interfaces/Time
+# This message communicates ROS Time defined here:
+# https://design.ros2.org/articles/clock_and_time.html
+
+# The seconds component, valid over all int32 values.
+int32 sec
+
+# The nanoseconds component, valid in the range [0, 1e9), to be added to the seconds component.
+# e.g.
+# The time -1.7 seconds is represented as {sec: -2, nanosec: 3e8}
+# The time 1.7 seconds is represented as {sec: 1, nanosec: 7e8}
+uint32 nanosec

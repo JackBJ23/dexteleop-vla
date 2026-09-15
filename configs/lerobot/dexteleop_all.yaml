@@ -1,0 +1,11 @@
+# All successful canonical DexTeleop episodes -> one LeRobot dataset (repo_id local/dexteleop_all).
+# Prompts are read from each episode's meta.json; only success: true episodes belong here.
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052359_f54c26c9/t125.86-210.86_hz15
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_035532_74a3cb58/t10-28_hz15
+# rec_20260821_052219_d4f4fc76 -- 6 segments (added 2026-09-14)
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t15-30_hz15
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t82-93_hz15
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t93.5-105_hz15
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t105.5-116_hz15
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t116-125_hz15
+- canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t125.5-135_hz15

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dexteleop"
+version = "0.0.1"
+description = "DexTeleop / TeleAvatar-2 MCAP -> canonical synchronized episodes (+ OpenPI / Diffusion Policy adapters)"
+requires-python = ">=3.11"
+dependencies = ["numpy", "pyyaml", "mcap", "mcap-ros2-support", "av", "opencv-python-headless", "matplotlib", "tqdm"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
