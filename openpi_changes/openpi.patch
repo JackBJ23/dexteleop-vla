@@ -51,7 +51,7 @@ index 6570df0..b4d3b71 100644
              *repack_transforms.outputs,
          ],
 diff --git a/src/openpi/training/config.py b/src/openpi/training/config.py
-index 4ca47e1..f020f25 100644
+index 4ca47e1..1dfbd49 100644
 --- a/src/openpi/training/config.py
 +++ b/src/openpi/training/config.py
 @@ -20,6 +20,10 @@ import openpi.models.tokenizer as _tokenizer
@@ -1507,7 +1507,7 @@ index 4ca47e1..f020f25 100644
              action_horizon=16,
          ),
          data=LeRobotDROIDDataConfig(
-@@ -968,6 +2131,71 @@ _CONFIGS = [
+@@ -968,6 +2131,73 @@ _CONFIGS = [
      # RoboArena & PolaRiS configs.
      *roboarena_config.get_roboarena_configs(),
      *polaris_config.get_polaris_configs(),
@@ -1517,6 +1517,7 @@ index 4ca47e1..f020f25 100644
 +    # Same model/LoRA/batch recipe as pi05_mobile_panda_skills_unified_v4; only steps shortened (single episode).
 +    TrainConfig(
 +        name="pi05_dexteleop_overfit1",
++        project_name="openpi_dexteleop",
 +        model=pi0_config.Pi0Config(
 +            pi05=True,
 +            action_horizon=10,
@@ -1548,6 +1549,7 @@ index 4ca47e1..f020f25 100644
 +    # overfit1 / unified_v4 (LoRA pi0.5 from pi05_base, batch 64, horizon 10); 10k steps.
 +    TrainConfig(
 +        name="pi05_dexteleop_v1",
++        project_name="openpi_dexteleop",
 +        model=pi0_config.Pi0Config(
 +            pi05=True,
 +            action_horizon=10,
