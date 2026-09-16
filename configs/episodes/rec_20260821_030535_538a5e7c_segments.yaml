@@ -15,7 +15,7 @@
 - {start_s: 310, end_s: 320.5, prompt: "Stack the red cylinder on the green cylinder.", success: true}
 - {start_s: 333, end_s: 341, prompt: "Stack the red cylinder on the green cylinder.", success: true}
 - {start_s: 351.7, end_s: 360.8, prompt: "Stack the red cylinder on the green cylinder.", success: true}
-- {start_s: 370, end_s: 378, prompt: "Stack the red cylinder on the green cylinder.", success: true}
+- {start_s: 370, end_s: 377.8, prompt: "Stack the red cylinder on the green cylinder.", success: true}
 - {start_s: 389.5, end_s: 398, prompt: "Stack the red cylinder on the green cylinder.", success: true}
 - {start_s: 405, end_s: 413, prompt: "Stack the red cylinder on the green cylinder.", success: true}
 - {start_s: 426.5, end_s: 433, prompt: "Stack the red cylinder on the green cylinder.", success: true}

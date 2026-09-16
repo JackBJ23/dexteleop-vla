@@ -12,7 +12,7 @@ success: true
 
 trim:
   start_s: 370
-  end_s: 378
+  end_s: 377.8
 
 rate_hz: 15
 
