@@ -46,6 +46,19 @@ Always `export PIP_CACHE_DIR=/n/netscratch/hankyang_lab/Lab/jackbjed/dexteleop-v
    needs editing when the recording list changes. Current training set (2026-09-14): rec_20260821_052219_d4f4fc76 only
    (6 segments, 1002 rows); `local/dexteleop_all` (8 episodes) remains on netscratch as an earlier build.
 
+## 0c. Project direction (2026-09-16)
+
+**Research goal: show that human demonstrations transfer to the robot** (new tasks / new environments from human
+data, "at scale human data is all we need"). Plan = Phantom/EgoMimic-style: human video (robot head camera now; Aria
+glasses later, ideally mounted on the robot head as the policy camera) → 3D thumb/index fingertips → gripper pose +
+opening → IK on the DexTeleop URDF → canonical 19-D actions (`source: human` in the registry) → co-train with teleop.
+Human demos have no wrist views → train with **wrist-camera dropout** on teleop samples (option chosen 2026-09-16)
+and mask wrists on human episodes; evaluate with and without wrists. First milestone: head-camera↔base calibration
+(`/tf_static` is empty in all bags) + fingertip→IK retargeting replayed on the real robot via `replay_episode.py`.
+**Tasks**: stack red cylinder on green cylinder / pick-and-place now; box opening–closing later. The peg-insertion
+episodes (rec_…052359, rec_…035532) are off-task and excluded from Stack training sets by the `--prompt` filter.
+World-model-based data generation and full physics-sim replay were considered and rejected at this scale.
+
 ## 1. REUSE the existing working π0.5 stack — do NOT reinvent it
 
 A working π0.5 LoRA fine-tuning pipeline already exists and must be reused:
