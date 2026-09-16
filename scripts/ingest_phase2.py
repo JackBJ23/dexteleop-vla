@@ -71,13 +71,17 @@ def main():
     if len(mcap) != 1: sys.exit(f"{raw}: expected one .mcap")
     from dexteleop.extract import extract, load_config
     from dexteleop.report import build_report
+    from dexteleop.mcap_io import read_topics
+    from dexteleop import schema as S
+    print(f"=== reading {mcap[0].name} once for {len(segs)} segment(s) ===")
+    streams = read_topics(mcap[0], S.topics_needed(), progress=False)
     results = []
     for n, sg in enumerate(segs, 1):
         cfg_path = REPO / "configs/episodes" / f"{rid}_seg{n:02d}.yaml"
         cfg_path.write_text(CFG_TEMPLATE.format(n=n, N=len(segs), rid=rid, date=a.date, mcap=mcap[0].name, prompt=json.dumps(sg["prompt"]), success=str(sg["success"]).lower(),
                                                 s=f"{sg['start_s']:g}", e=f"{sg['end_s']:g}", out_root=OUT_ROOT))
         print(f"=== seg{n:02d}: {sg['start_s']:g}-{sg['end_s']:g} s  {sg['prompt']!r}  success={sg['success']} ===")
-        out = extract(load_config(cfg_path), REPO, write_frames=not a.no_frames, progress=False)
+        out = extract(load_config(cfg_path), REPO, write_frames=not a.no_frames, progress=False, streams=streams)
         if not a.no_frames: build_report(out)
         r = summarize(out / "meta.json") | dict(segment=n, config=str(cfg_path.relative_to(REPO)), **sg); results.append(r)
         print(f"   K={r['K']} missing={r['n_missing']} out_of_tol={r['n_out_of_tol']} nan={r['nan']} reused={r['reused_frames']} max_age={r['max_age_ms']} -> {out}")

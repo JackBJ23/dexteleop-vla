@@ -79,7 +79,9 @@ def select_eye(frame: np.ndarray, eye: str) -> np.ndarray:
     return frame[:, :half] if eye == "left" else frame[:, half:]
 
 
-def extract(cfg: dict, repo_root: Path, write_frames: bool = True, progress: bool = True) -> Path:
+def extract(cfg: dict, repo_root: Path, write_frames: bool = True, progress: bool = True, streams: dict | None = None) -> Path:
+    """`streams`: optional pre-read result of mcap_io.read_topics(mcap, schema.topics_needed()) so that many segments of
+    one recording can be cut without re-reading the MCAP (ingest_phase2 does this)."""
     t_start = time.time()
     mcap_path = (repo_root / cfg["mcap"]).resolve()
     info = mcap_info(mcap_path)
@@ -91,7 +93,8 @@ def extract(cfg: dict, repo_root: Path, write_frames: bool = True, progress: boo
     grid = make_grid(start_ns, end_ns, float(cfg["rate_hz"]))
     K = grid.size
 
-    streams = read_topics(mcap_path, S.topics_needed(), progress=progress)
+    if streams is None:
+        streams = read_topics(mcap_path, S.topics_needed(), progress=progress)
     check_joint_names(streams)
 
     proprio, al_p = assemble(S.PROPRIO_DIMS, streams, grid, cfg["align"]["proprio"])
