@@ -54,6 +54,9 @@ def main():
     insp = json.loads((REPO / "reports" / f"{rid}_inspection.json").read_text())
     preview = VIDEOS / f"{rid}_preview_head_{a.fps:g}fps.mp4"
     print(f"=== [2/3] head preview -> {preview} ==="); subprocess.run([PY, str(REPO / "scripts/preview_head_stream.py"), str(mcap), "--out", str(preview), "--fps", str(a.fps), "--size", str(a.size)], check=True, env=env)
+    link = mcap.parent / preview.name                       # convenience symlink next to the MCAP (raw folder on holylfs05)
+    if not link.exists():
+        link.symlink_to(preview)
     print("=== [3/3] marker edges ==="); edges = marker_edges(mcap)
     # ---- summary ----------------------------------------------------------------------------------------------------
     tp = insp["topics"]; cams = {c: tp.get(t, {}) for c, t in {"left": "/left/color/image_raw/ffmpeg", "right": "/right/color/image_raw/ffmpeg", "head": "/xr_video_topic/ffmpeg"}.items()}
@@ -71,7 +74,7 @@ def main():
         elif d["last_s"] < dur - 1.0: problems.append(f"{t}: ends at {d['last_s']:.1f}s")
         elif d.get("dt_ms", {}).get("max", 0) > 200: problems.append(f"{t}: max gap {d['dt_ms']['max']:.0f} ms")
     L = [f"# Phase-1 summary: {rid}", "", f"- MCAP: `{mcap}` ({insp['size_bytes']/2**20:.0f} MiB)", f"- messages span **{dur:.3f} s** ({insp['message_count']} msgs); t=0 == first message log_time",
-         f"- preview: `{preview}` ({a.fps:g} fps, head/left eye, {a.size}px). Burned-in `t` = (tick log_time − first message)/1e9 s; playback time == t.",
+         f"- preview: `{preview}` (symlinked as `{link}`; {a.fps:g} fps, head/left eye, {a.size}px). Burned-in `t` = (tick log_time − first message)/1e9 s; playback time == t.",
          "- cameras: " + "; ".join(f"{c}: {d.get('count_seen',0)} pkts, {d.get('rate_hz',0) or 0:.1f} Hz, {d.get('first_s',0):.2f}–{d.get('last_s',0):.2f} s" for c, d in cams.items()),
          "- problems: " + ("; ".join(problems) if problems else "none detected"),
          "- X/Y markers: " + ("none" if not any(k.endswith(("X", "Y")) for k in edges) else "PRESENT"),
