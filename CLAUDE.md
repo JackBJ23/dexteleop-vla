@@ -29,7 +29,8 @@ Always `export PIP_CACHE_DIR=/n/netscratch/hankyang_lab/Lab/jackbjed/dexteleop-v
 1. **Phase 1** — `$PY scripts/ingest_phase1.py <record_id>` → symlinks `data/raw/<record_id>` from the holylfs05 raw
    store if needed, runs the MCAP inspection, builds the head-only preview MP4 (`${NS}/videos/<record_id>_preview_head_10fps.mp4`,
    burned-in `t` = MCAP log_time − first message; playback time == t), extracts X/Y + button edges, writes
-   `reports/<record_id>_phase1.md`. **Send the MP4 to the user and STOP.** The user answers with, per segment:
+   `reports/<record_id>_phase1.md`. **Report the MP4 path (do NOT send the file into the session) and STOP.** The user
+   watches it from the cluster path and answers with, per segment:
    `start_s / end_s / prompt / success`.
 2. **Phase 2** — `$PY scripts/ingest_phase2.py <record_id> --date YYYY-MM-DD --seg START END "PROMPT" true [--seg ...]`
    → writes `configs/episodes/<record_id>_segNN.yaml`, extracts + validates every segment (all 3 cameras, QC, preview),
