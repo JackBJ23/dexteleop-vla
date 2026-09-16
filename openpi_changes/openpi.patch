@@ -51,7 +51,7 @@ index 6570df0..b4d3b71 100644
              *repack_transforms.outputs,
          ],
 diff --git a/src/openpi/training/config.py b/src/openpi/training/config.py
-index 4ca47e1..1dfbd49 100644
+index 4ca47e1..f1bddf7 100644
 --- a/src/openpi/training/config.py
 +++ b/src/openpi/training/config.py
 @@ -20,6 +20,10 @@ import openpi.models.tokenizer as _tokenizer
@@ -1507,7 +1507,7 @@ index 4ca47e1..1dfbd49 100644
              action_horizon=16,
          ),
          data=LeRobotDROIDDataConfig(
-@@ -968,6 +2131,73 @@ _CONFIGS = [
+@@ -968,6 +2131,104 @@ _CONFIGS = [
      # RoboArena & PolaRiS configs.
      *roboarena_config.get_roboarena_configs(),
      *polaris_config.get_polaris_configs(),
@@ -1567,6 +1567,37 @@ index 4ca47e1..1dfbd49 100644
 +        batch_size=64,
 +        weight_loader=weight_loaders.CheckpointWeightLoader("gs://openpi-assets/checkpoints/pi05_base/params"),
 +        num_train_steps=10_000,
++        save_interval=1_000,
++        keep_period=1_000,
++        freeze_filter=pi0_config.Pi0Config(
++            pi05=True,
++            action_horizon=10,
++            discrete_state_input=False,
++            paligemma_variant="gemma_2b_lora",
++            action_expert_variant="gemma_300m_lora",
++        ).get_freeze_filter(),
++        ema_decay=None,
++    ),
++    # v1_20k: identical to pi05_dexteleop_v1 but 20k steps -- used to CONTINUE a finished 10k run (copy its latest step dir
++    # into <CKPT_BASE>/pi05_dexteleop_v1_20k/<EXP>/ and run 02c with RESUME=1; see dexteleop-vla/scripts/continue_training.sh).
++    # The LR schedule (cosine over 30k steps) is independent of num_train_steps, so the continuation is seamless.
++    TrainConfig(
++        name="pi05_dexteleop_v1_20k",
++        project_name="openpi_dexteleop",
++        model=pi0_config.Pi0Config(
++            pi05=True,
++            action_horizon=10,
++            discrete_state_input=False,
++            paligemma_variant="gemma_2b_lora",
++            action_expert_variant="gemma_300m_lora",
++        ),
++        data=LeRobotDexTeleopDataConfig(
++            repo_id="local/dexteleop_train",
++            base_config=DataConfig(prompt_from_task=True, quantile_min_range=1.0),
++        ),
++        batch_size=64,
++        weight_loader=weight_loaders.CheckpointWeightLoader("gs://openpi-assets/checkpoints/pi05_base/params"),
++        num_train_steps=20_000,
 +        save_interval=1_000,
 +        keep_period=1_000,
 +        freeze_filter=pi0_config.Pi0Config(
