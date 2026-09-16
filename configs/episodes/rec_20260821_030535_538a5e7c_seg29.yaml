@@ -1,0 +1,26 @@
+# Canonical-extraction config: segment 29 of 31 of recording rec_20260821_030535_538a5e7c. Times = seconds of MCAP log_time
+# relative to the first message of the bag (the clock burned into the phase-1 preview MP4).
+episode_id: rec_20260821_030535_538a5e7c
+record_id: rec_20260821_030535_538a5e7c
+segment: 29
+actual_date: "2026-09-16"
+mcap: data/raw/rec_20260821_030535_538a5e7c/rec_20260821_030535_538a5e7c_0.mcap
+
+# Supplied by the user (not inferred).
+prompt: "Stack the red cylinder on the green cylinder."
+success: true
+
+trim:
+  start_s: 608
+  end_s: 616
+
+rate_hz: 15
+
+align: {proprio: hold, action: next, camera: hold}
+tolerances: {proprio_max_age_s: 0.05, action_max_lead_s: 0.10, camera_max_age_s: 0.06, fail_on_violation: false}
+cameras:
+  left:  {eye: right, resize: null}
+  right: {eye: left, resize: null}
+  head:  {eye: left, resize: [960, 960]}
+jpeg_quality: 95
+output_root: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical

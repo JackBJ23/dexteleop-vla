@@ -1068,3 +1068,783 @@ rec_20260821_041443_549ed9ec:
     prompt: Stack the red cylinder on the green cylinder.
     success: true
     canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_041443_549ed9ec/t625.5-633_hz15
+rec_20260821_030535_538a5e7c:
+  record_id: rec_20260821_030535_538a5e7c
+  actual_date: '2026-09-16'
+  mcap: /n/holylabs/hankyang_lab/Lab/jackbjed/dexteleop-vla/data/raw/rec_20260821_030535_538a5e7c/rec_20260821_030535_538a5e7c_0.mcap
+  segments:
+  - K: 140
+    variant: t13.2-22.5_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.2
+      action: 20.9
+      camera: 14.0
+    frames:
+      left: 140
+      right: 140
+      head: 140
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 1
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg01.yaml
+    start_s: 13.2
+    end_s: 22.5
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t13.2-22.5_hz15
+  - K: 143
+    variant: t32-41.5_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.8
+      action: 20.2
+      camera: 13.9
+    frames:
+      left: 143
+      right: 143
+      head: 143
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 2
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg02.yaml
+    start_s: 32
+    end_s: 41.5
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t32-41.5_hz15
+  - K: 181
+    variant: t56-68_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.1
+      action: 20.7
+      camera: 13.8
+    frames:
+      left: 181
+      right: 181
+      head: 181
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 3
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg03.yaml
+    start_s: 56
+    end_s: 68
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t56-68_hz15
+  - K: 121
+    variant: t82.5-90.5_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.1
+      action: 20.4
+      camera: 24.6
+    frames:
+      left: 121
+      right: 121
+      head: 121
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 4
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg04.yaml
+    start_s: 82.5
+    end_s: 90.5
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t82.5-90.5_hz15
+  - K: 136
+    variant: t102-111_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.1
+      action: 20.5
+      camera: 13.5
+    frames:
+      left: 136
+      right: 136
+      head: 136
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 5
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg05.yaml
+    start_s: 102
+    end_s: 111
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t102-111_hz15
+  - K: 128
+    variant: t139-147.5_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 4.7
+      action: 20.3
+      camera: 23.3
+    frames:
+      left: 128
+      right: 128
+      head: 128
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 6
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg06.yaml
+    start_s: 139
+    end_s: 147.5
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t139-147.5_hz15
+  - K: 128
+    variant: t155-163.5_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.0
+      action: 20.7
+      camera: 13.4
+    frames:
+      left: 128
+      right: 128
+      head: 128
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 7
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg07.yaml
+    start_s: 155
+    end_s: 163.5
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t155-163.5_hz15
+  - K: 121
+    variant: t179-187_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.2
+      action: 20.6
+      camera: 25.5
+    frames:
+      left: 121
+      right: 121
+      head: 121
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 8
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg08.yaml
+    start_s: 179
+    end_s: 187
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t179-187_hz15
+  - K: 121
+    variant: t196-204_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.0
+      action: 19.6
+      camera: 25.5
+    frames:
+      left: 121
+      right: 121
+      head: 121
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 9
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg09.yaml
+    start_s: 196
+    end_s: 204
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t196-204_hz15
+  - K: 121
+    variant: t216-224_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.3
+      action: 20.6
+      camera: 25.3
+    frames:
+      left: 121
+      right: 121
+      head: 121
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 10
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg10.yaml
+    start_s: 216
+    end_s: 224
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t216-224_hz15
+  - K: 143
+    variant: t243-252.5_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.2
+      action: 21.1
+      camera: 25.2
+    frames:
+      left: 143
+      right: 143
+      head: 143
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 11
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg11.yaml
+    start_s: 243
+    end_s: 252.5
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t243-252.5_hz15
+  - K: 151
+    variant: t264-274_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 4.8
+      action: 20.4
+      camera: 25.3
+    frames:
+      left: 151
+      right: 151
+      head: 151
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 12
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg12.yaml
+    start_s: 264
+    end_s: 274
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t264-274_hz15
+  - K: 128
+    variant: t292-300.5_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.1
+      action: 20.5
+      camera: 25.3
+    frames:
+      left: 128
+      right: 128
+      head: 128
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 13
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg13.yaml
+    start_s: 292
+    end_s: 300.5
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t292-300.5_hz15
+  - K: 158
+    variant: t310-320.5_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.4
+      action: 20.0
+      camera: 25.1
+    frames:
+      left: 158
+      right: 158
+      head: 158
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 14
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg14.yaml
+    start_s: 310
+    end_s: 320.5
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t310-320.5_hz15
+  - K: 121
+    variant: t333-341_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.1
+      action: 21.4
+      camera: 25.0
+    frames:
+      left: 121
+      right: 121
+      head: 121
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 15
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg15.yaml
+    start_s: 333
+    end_s: 341
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t333-341_hz15
+  - K: 137
+    variant: t351.7-360.8_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 6.0
+      action: 21.9
+      camera: 23.4
+    frames:
+      left: 137
+      right: 137
+      head: 137
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 16
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg16.yaml
+    start_s: 351.7
+    end_s: 360.8
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t351.7-360.8_hz15
+  - K: 121
+    variant: t370-378_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 4.6
+      action: 21.0
+      camera: 24.9
+    frames:
+      left: 121
+      right: 121
+      head: 121
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.01652892561983471
+    segment: 17
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg17.yaml
+    start_s: 370
+    end_s: 378
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t370-378_hz15
+  - K: 128
+    variant: t389.5-398_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.0
+      action: 20.1
+      camera: 23.4
+    frames:
+      left: 128
+      right: 128
+      head: 128
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 18
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg18.yaml
+    start_s: 389.5
+    end_s: 398
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t389.5-398_hz15
+  - K: 121
+    variant: t405-413_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.1
+      action: 19.0
+      camera: 24.7
+    frames:
+      left: 121
+      right: 121
+      head: 121
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 19
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg19.yaml
+    start_s: 405
+    end_s: 413
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t405-413_hz15
+  - K: 98
+    variant: t426.5-433_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.4
+      action: 20.2
+      camera: 23.1
+    frames:
+      left: 98
+      right: 98
+      head: 98
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 20
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg20.yaml
+    start_s: 426.5
+    end_s: 433
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t426.5-433_hz15
+  - K: 143
+    variant: t441-450.5_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 10.5
+      action: 20.5
+      camera: 24.6
+    frames:
+      left: 143
+      right: 143
+      head: 143
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 21
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg21.yaml
+    start_s: 441
+    end_s: 450.5
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t441-450.5_hz15
+  - K: 121
+    variant: t474-482_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.4
+      action: 22.0
+      camera: 24.5
+    frames:
+      left: 121
+      right: 121
+      head: 121
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 22
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg22.yaml
+    start_s: 474
+    end_s: 482
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t474-482_hz15
+  - K: 121
+    variant: t493-501_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 4.8
+      action: 20.6
+      camera: 24.3
+    frames:
+      left: 121
+      right: 121
+      head: 121
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 23
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg23.yaml
+    start_s: 493
+    end_s: 501
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t493-501_hz15
+  - K: 110
+    variant: t514-521.3_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.0
+      action: 20.4
+      camera: 24.2
+    frames:
+      left: 110
+      right: 110
+      head: 110
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 24
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg24.yaml
+    start_s: 514
+    end_s: 521.3
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t514-521.3_hz15
+  - K: 127
+    variant: t535.6-544_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 4.8
+      action: 20.4
+      camera: 24.1
+    frames:
+      left: 127
+      right: 127
+      head: 127
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 25
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg25.yaml
+    start_s: 535.6
+    end_s: 544
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t535.6-544_hz15
+  - K: 106
+    variant: t551-558_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.1
+      action: 22.8
+      camera: 24.1
+    frames:
+      left: 106
+      right: 106
+      head: 106
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 26
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg26.yaml
+    start_s: 551
+    end_s: 558
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t551-558_hz15
+  - K: 106
+    variant: t581-588_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.2
+      action: 20.5
+      camera: 24.0
+    frames:
+      left: 106
+      right: 106
+      head: 106
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 27
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg27.yaml
+    start_s: 581
+    end_s: 588
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t581-588_hz15
+  - K: 106
+    variant: t595-602_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 4.5
+      action: 19.3
+      camera: 23.8
+    frames:
+      left: 106
+      right: 106
+      head: 106
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 28
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg28.yaml
+    start_s: 595
+    end_s: 602
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t595-602_hz15
+  - K: 121
+    variant: t608-616_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 4.7
+      action: 20.6
+      camera: 23.8
+    frames:
+      left: 121
+      right: 121
+      head: 121
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 29
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg29.yaml
+    start_s: 608
+    end_s: 616
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t608-616_hz15
+  - K: 128
+    variant: t624.5-633_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 4.9
+      action: 21.3
+      camera: 22.3
+    frames:
+      left: 128
+      right: 128
+      head: 128
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 30
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg30.yaml
+    start_s: 624.5
+    end_s: 633
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t624.5-633_hz15
+  - K: 128
+    variant: t645-653.5_hz15
+    blockers: []
+    n_missing: 0
+    n_out_of_tol: 0
+    reused_frames: 0
+    nan: 0
+    max_age_ms:
+      proprio: 5.2
+      action: 19.4
+      camera: 23.6
+    frames:
+      left: 128
+      right: 128
+      head: 128
+    left_gripper_min: -1.600000023841858
+    right_gripper_min: 2.0
+    base_active_frac: 0.0
+    segment: 31
+    config: configs/episodes/rec_20260821_030535_538a5e7c_seg31.yaml
+    start_s: 645
+    end_s: 653.5
+    prompt: Stack the red cylinder on the green cylinder.
+    success: true
+    canonical: /n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_030535_538a5e7c/t645-653.5_hz15
