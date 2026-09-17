@@ -9,7 +9,7 @@ export PATH="$HOME/.local/bin:$PATH"; export UV_CACHE_DIR="${REPO}/pi/cache/uv";
 CONFIG=${CONFIG:-pi05_dexteleop_overfit1}; EXP=${EXP:-dexteleop_overfit1_lora}; STEP=${STEP:-500}
 CKPT="${CKROOT:-${NS}/checkpoints}/${CONFIG}/${EXP}/${STEP}"; [ -d "${CKPT}/params" ] || { echo "no ckpt ${CKPT}"; exit 1; }
 CANONICAL=${CANONICAL:-/n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052359_f54c26c9/t125.86-210.86_hz15}
-OUT="${NS}/eval/${CONFIG}/${EXP}_${STEP}"
+OUT="${NS}/eval/${CONFIG}/${EXP}_${STEP}/$(basename $(dirname ${CANONICAL}))_$(basename ${CANONICAL})"
 cd "${REPO}/pi/openpi"
 uv run python "${DT}/scripts/eval_replay_checkpoint.py" --config ${CONFIG} --ckpt "${CKPT}" --canonical "${CANONICAL}" --out "${OUT}" --stride ${STRIDE:-5}
 echo "DT03_DONE ${OUT}"
