@@ -31,7 +31,7 @@ def test_dry_run_replay_end_to_end(tmp_path):
     if not ep.exists(): pytest.skip("canonical episode not available")
     import argparse
     args = argparse.Namespace(mode="replay", fork=None, episode=str(ep), prompt=None, host="", port=0, control_hz=15.0, interp_hz=200.0,
-                              chunk=10, speed=1000.0, max_joint_delta=0.5, hold_right_arm=False, max_chunks=0, mode_confirm_replay=False,
+                              chunk=10, speed=1000.0, max_joint_delta=0.5, hold_right_arm=False, max_chunks=0, mode_confirm_replay=False, go_to_start=False,
                               dry_run=True, log=str(tmp_path / "log.json"))
     robot = C.run(args)
     A = np.load(ep / "episode.npz")["action"]

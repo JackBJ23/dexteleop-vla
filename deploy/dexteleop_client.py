@@ -231,7 +231,7 @@ def run(args):
             if info: LOG.warning(f"  step {i}: delta clamp {info}")
             time.sleep(dt)
 
-    if args.go_to_start:
+    if getattr(args, "go_to_start", False):
         if not args.episode: raise SystemExit("--go-to-start needs --episode (its frame-0 proprio is the target pose)")
         z0 = np.load(Path(args.episode) / "episode.npz"); target = z0["proprio"][0].astype(np.float64)
         m = robot.measured_arm14()
