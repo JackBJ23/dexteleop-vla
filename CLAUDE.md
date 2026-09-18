@@ -409,9 +409,16 @@ Commands: `/api/{left,right}_arm/joint_cmd` (JointState positions, clamp to `arm
 `/api/{left,right}_gripper/cmd` (Float32 trigger∈[0,1]; effort = +2.0·(1−t/0.10) for t<0.10 else −1.6·(t−0.10)/0.90;
 our raw-effort action must be mapped with the inverse before publishing), `/api/fsm/enable`. **No chassis/base API
 topic** in their client. Policy server = `serve_policy.py` (same as ManiSkill mp74).
-**DECISION: deployment machine = the lab workstation** (Ubuntu 22.04, RT kernel 6.8.2-rt11, 2× RTX 6000 Ada 48 GB,
-spare NIC `enp37s0f0`; needs a reboot for the NVIDIA driver mismatch + `gstreamer1.0-plugins-bad`). It is client AND
-policy server; the cluster stays training/eval only; checkpoints rsync'd from netscratch.
+**DECISION: deployment machine = the lab workstation** "Woodbury-Lambda-Vector" (Ubuntu 22.04, 2× RTX 6000 Ada 48 GB,
+spare NIC `enp37s0f0`, LAN IP `10.251.2.208` on `enp37s0f1`). It is client AND policy server; the cluster stays
+training/eval only. **State after 2026-09-18 repair:** boots the **generic kernel `6.8.0-138-generic` by default**
+(GRUB_DEFAULT set) because the NVIDIA module cannot be built for the RT kernel `6.8.2-rt11` (no headers; DKMS
+`BUILD_EXCLUSIVE_KERNEL` set in `/etc/dkms/nvidia.conf` to skip it); rt11 stays in the GRUB menu for Franka use but has
+no GPU driver. Driver 595.91.07 works; `nvidia-driver-595 nvidia-dkms-595 nvidia-utils-595 xserver-xorg-video-nvidia-595`
+are `apt-mark hold` (an unattended upgrade caused the original mismatch). **Inbound SSH (port 22) to the workstation is
+blocked by the network** (ping works, TCP/22 filtered even via login.rc); outbound SSH works → checkpoints are PULLED
+from the workstation with rsync from `login.rc.fas.harvard.edu`. Deployment work lives in `~/tdieudonne/dexteleop/`
+(`dexteleop-vla` clone, `openpi_teleavatar` = dexteleop/openpi fork for the client, `openpi_serve` = our patched openpi).
 **Camera-eye decision**: at deployment the client provides the INNER eyes — head LEFT eye (960×960), right wrist LEFT
 eye, **left wrist RIGHT eye**. All canonical episodes were re-extracted 2026-09-14 with `left: {eye: right}`
 (ingest_phase2 template + all configs updated); the earlier `dexteleop_train`/`dexteleop_all` builds and the
