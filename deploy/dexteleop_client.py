@@ -232,8 +232,12 @@ def run(args):
             time.sleep(dt)
 
     if getattr(args, "go_to_start", False):
-        if not args.episode: raise SystemExit("--go-to-start needs --episode (its frame-0 proprio is the target pose)")
-        z0 = np.load(Path(args.episode) / "episode.npz"); target = z0["proprio"][0].astype(np.float64)
+        if getattr(args, "start_pose", "episode") == "mean":      # mean frame-0 pose over all training stack demos
+            sp = json.loads((Path(__file__).parent / "start_pose_stack.json").read_text()); target = np.asarray(sp["mean"], dtype=np.float64)
+            LOG.info(f"start pose = MEAN over {sp['n']} training demos (per-joint std max {max(sp['std'][:14]):.3f} rad)")
+        else:
+            if not args.episode: raise SystemExit("--go-to-start needs --episode (its frame-0 proprio is the target pose) or --start-pose mean")
+            z0 = np.load(Path(args.episode) / "episode.npz"); target = z0["proprio"][0].astype(np.float64)
         m = robot.measured_arm14()
         if m is None: raise SystemExit("no measured arm pose")
         n = max(int(np.ceil(np.abs(target[0:14] - m).max() / (args.max_joint_delta * 0.5))), 1)
@@ -289,7 +293,8 @@ def main():
     ap.add_argument("--max-joint-delta", type=float, default=0.15, help="rad per control step, per joint")
     ap.add_argument("--hold-right-arm", action="store_true", help="freeze the right arm at its start pose (left-arm tasks)")
     ap.add_argument("--max-chunks", type=int, default=0); ap.add_argument("--mode-confirm-replay", action="store_true", help="confirm each replay chunk too")
-    ap.add_argument("--go-to-start", action="store_true", help="first ease the arms to --episode's frame-0 pose (through the safety layer)")
+    ap.add_argument("--go-to-start", action="store_true", help="first ease the arms to a training start pose (through the safety layer)")
+    ap.add_argument("--start-pose", choices=["episode", "mean"], default="mean", help="frame-0 pose of --episode, or the mean over all training stack demos (deploy/start_pose_stack.json)")
     ap.add_argument("--dry-run", action="store_true"); ap.add_argument("--log", default="deploy/logs/run_%d.json" % int(time.time()))
     args = ap.parse_args()
     if args.mode != "replay" and not args.prompt: ap.error("--prompt is required for policy modes (never invent one)")

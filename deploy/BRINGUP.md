@@ -19,6 +19,13 @@ client at the same time (both publish `/api/*/joint_cmd`).
       (with the server running) → prints chunks, writes `deploy/logs/run_*.json`
 
 ## 1. Network + robot config (robot powered, arms NOT enabled yet)
+**Base placement (in-distribution!)**: the policy never drives the base, but it sees the table from wherever the base is. Before
+switching to API mode, drive the base (VR/teleop) so the live head view matches a training demo: compare `test.py`'s
+`head_left_eye` crop with `episodes/<ep>/frames/head/000000.jpg` (table edge + black mat position are the cues). Mark 3 such
+placements on the floor with tape (one per training recording) — they are the eval placements.
+**Arm start pose**: do NOT rely on `zero.py`'s generic home pose for policy runs — use `--go-to-start` (mean training start pose,
+`deploy/start_pose_stack.json`: left arm [+0.16, +0.81, −0.13, +1.25, +0.48, −0.15, +0.24] rad, right arm
+[−0.67, −0.98, +0.54, −0.79, −0.31, +0.21, −0.60], grippers open ≈ 1.10/1.15; per-joint std ≤ 0.3 rad across 69 demos).
 - [ ] cable robot switch ↔ `enp37s0f0`; static IP on the robot subnet (`nmcli con add type ethernet ifname enp37s0f0 con-name robot ip4 <IP>/24`)
 - [ ] robot remoteApp → System Config: Run mode **API**, left+right arm enabled, control mode **joint**, remote IP = workstation `enp37s0f0` IP → Save config → Apply
 - [ ] `export ROS_DOMAIN_ID=29; zenoh-bridge-ros2dds -e tcp/<ROBOT_IP>:9000` (keep running); `ros2 topic list` shows `/left_arm/joint_states`, `/left_gripper/joint_states`, `/chassis/joint_states`, …
