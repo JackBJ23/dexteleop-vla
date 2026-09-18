@@ -18,6 +18,20 @@ client at the same time (both publish `/api/*/joint_cmd`).
       and `python dexteleop-vla/deploy/dexteleop_client.py --mode auto --dry-run --episode <ep> --prompt "Stack the red cylinder on the green cylinder." --max-chunks 3`
       (with the server running) → prints chunks, writes `deploy/logs/run_*.json`
 
+## Facts from the official TA2 docs (dexteleop.com/docs/teleavatar-2, /docs/user-manual) — verified 2026-09-18
+- remoteApp = Pico app **TeleAvatar_LINK**; robot/core-board IP from the router admin page `192.168.31.1` (password in the user manual).
+- API mode: System Config → **开发配置** → 运行模式 = **API** (1; VR = 0) → enable each arm, mode **关节** (joint = 1) → (optionally
+  enable 底盘 chassis) → **保存配置 → 生效 → physically RESTART the robot**. Software image `TA2-DEV-Z-IMG-1.0.0`.
+- Ports: 9000/tcp zenoh router (control+state), 8890/udp RTP/H.265 2720×1280 ~45 fps robot→host. `ROS_DOMAIN_ID=29`.
+- Commands: `/api/{left,right}_arm/joint_cmd` JointState (7 positions, **≥50 Hz, interval <0.15 s** → keep interpolate=True),
+  `/api/{left,right}_gripper/cmd` Float32 ∈[0,1] (**0.0 = open direction**), `/api/fsm/enable` Float32 heartbeat 10–20 Hz (1.0 = enable),
+  `/api/chassis/velocity` Float32MultiArray `[vx, vy, wz]` (exists! not used for stacking).
+- Safety: arms **auto-PAUSE after >1 s without the FSM heartbeat** (Ctrl+C on the client ⇒ pause); explicit stop = publish 0.0 to
+  `/api/fsm/enable`; chassis auto-stops 1 s after the last velocity cmd. `/fsm_state` Int32: 0 PAUSE, 2 READY, −1 ERROR — the client
+  refuses to publish unless READY. Joint limits = `arm_config.yml`. Power on: router first, release E-stop (rotate clockwise);
+  power off: arms in natural down pose → shutdown in app → press E-stop → disconnect. **Never move the robot while powered on.**
+- Offline MuJoCo simulator exists (ROS domain 90) — an option for testing the client before the real robot.
+
 ## 1. Network + robot config (robot powered, arms NOT enabled yet)
 **Base placement (in-distribution!)**: the policy never drives the base, but it sees the table from wherever the base is. Before
 switching to API mode, drive the base (VR/teleop) so the live head view matches a training demo: compare `test.py`'s

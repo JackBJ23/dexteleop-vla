@@ -111,6 +111,9 @@ def make_ros_interface_class(fork_root: Path):
             super().__init__(node_name="dexteleop_openpi_interface", **kw)
             self.extra_states: dict = {}
             self.extra_stamps: dict = {}
+            from std_msgs.msg import Int32                                   # /fsm_state: 0=PAUSE, 2=READY, -1=ERROR (TA2 docs)
+            self.fsm_state = None
+            self.create_subscription(Int32, "/fsm_state", lambda m: setattr(self, "fsm_state", int(m.data)), 10)
             for grp, topic in (("left_gripper", "/left_gripper/joint_states"), ("right_gripper", "/right_gripper/joint_states"),
                                ("chassis", "/chassis/joint_states")):
                 self.create_subscription(JointState, topic, lambda m, g=grp: self._extra_cb(m, g), 10)
@@ -177,7 +180,14 @@ class RosRobot:
 
     def observe(self): return self._iface.get_observation19()
     def measured_arm14(self): return self._iface.measured_arm14()
-    def publish19(self, a19): self._iface.publish_action(action19_to_action16(a19))
+    def fsm_ready(self) -> bool:
+        st = self._iface.fsm_state
+        if st == 2: return True
+        LOG.error(f"/fsm_state = {st} (0=PAUSE, 2=READY, -1=ERROR, None=not received) — not publishing")
+        return False
+    def publish19(self, a19):
+        if not self.fsm_ready(): return
+        self._iface.publish_action(action19_to_action16(a19))
 
 
 class DryRobot:
@@ -199,6 +209,7 @@ class DryRobot:
                            "observation/right_image": img("right", (400, 640))}}
 
     def measured_arm14(self): return self.z["proprio"][min(self.k, self.K - 1), 0:14].astype(np.float64)
+    def fsm_ready(self): return True
     def publish19(self, a19): self.published.append(np.asarray(a19, dtype=np.float32).copy()); self.k += 1
 
 

@@ -408,7 +408,9 @@ GStreamer `nvh265dec` (their conda `environment.yml`). Robot must be in **API** 
 Commands: `/api/{left,right}_arm/joint_cmd` (JointState positions, clamp to `arm_config.yml` limits),
 `/api/{left,right}_gripper/cmd` (Float32 trigger∈[0,1]; effort = +2.0·(1−t/0.10) for t<0.10 else −1.6·(t−0.10)/0.90;
 our raw-effort action must be mapped with the inverse before publishing), `/api/fsm/enable`. **No chassis/base API
-topic** in their client. Policy server = `serve_policy.py` (same as ManiSkill mp74).
+topic** in their client — but the official TA2 docs (dexteleop.com/docs/teleavatar-2) DO define `/api/chassis/velocity`
+`[vx, vy, wz]`; see `deploy/BRINGUP.md` for the verified doc facts (API-mode steps, heartbeat/pause semantics, image version).
+Policy server = `serve_policy.py` (same as ManiSkill mp74).
 **DECISION: deployment machine = the lab workstation** "Woodbury-Lambda-Vector" (Ubuntu 22.04, 2× RTX 6000 Ada 48 GB,
 spare NIC `enp37s0f0`, LAN IP `10.251.2.208` on `enp37s0f1`). It is client AND policy server; the cluster stays
 training/eval only. **State after 2026-09-18 repair:** boots the **generic kernel `6.8.0-138-generic` by default**
