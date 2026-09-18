@@ -231,6 +231,20 @@ def run(args):
             if info: LOG.warning(f"  step {i}: delta clamp {info}")
             time.sleep(dt)
 
+    if args.go_to_start:
+        if not args.episode: raise SystemExit("--go-to-start needs --episode (its frame-0 proprio is the target pose)")
+        z0 = np.load(Path(args.episode) / "episode.npz"); target = z0["proprio"][0].astype(np.float64)
+        m = robot.measured_arm14()
+        if m is None: raise SystemExit("no measured arm pose")
+        n = max(int(np.ceil(np.abs(target[0:14] - m).max() / (args.max_joint_delta * 0.5))), 1)
+        LOG.info(f"GO-TO-START: easing arms to the episode's frame-0 pose over {n} steps (max |Δq| {np.abs(target[0:14]-m).max():.3f} rad); grippers OPEN")
+        for i in range(1, n + 1):
+            a = np.zeros(19); a[0:14] = m + (target[0:14] - m) * i / n; a[14] = a[15] = GRIP_OPEN_EFFORT
+            a_f, _ = safety.filter_step(a, robot.measured_arm14()); robot.publish19(a_f); time.sleep(dt)
+        time.sleep(1.0)
+        if args.mode == "replay" or args.mode_confirm_replay:
+            input("  at start pose. Enter to continue… ")
+
     if args.mode == "replay":
         ep = Path(args.episode); z = np.load(ep / "episode.npz"); A = z["action"]; H = args.chunk
         LOG.info(f"REPLAY {ep.name}: {A.shape[0]} recorded steps at {args.control_hz} Hz x speed {args.speed} (chunks of {H})")
@@ -275,6 +289,7 @@ def main():
     ap.add_argument("--max-joint-delta", type=float, default=0.15, help="rad per control step, per joint")
     ap.add_argument("--hold-right-arm", action="store_true", help="freeze the right arm at its start pose (left-arm tasks)")
     ap.add_argument("--max-chunks", type=int, default=0); ap.add_argument("--mode-confirm-replay", action="store_true", help="confirm each replay chunk too")
+    ap.add_argument("--go-to-start", action="store_true", help="first ease the arms to --episode's frame-0 pose (through the safety layer)")
     ap.add_argument("--dry-run", action="store_true"); ap.add_argument("--log", default="deploy/logs/run_%d.json" % int(time.time()))
     args = ap.parse_args()
     if args.mode != "replay" and not args.prompt: ap.error("--prompt is required for policy modes (never invent one)")

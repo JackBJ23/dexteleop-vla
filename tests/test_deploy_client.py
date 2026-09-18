@@ -26,7 +26,8 @@ def test_safety_delta_clamp_and_right_hold():
 
 
 def test_dry_run_replay_end_to_end(tmp_path):
-    ep = Path("/n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t125.5-135_hz15")
+    import os
+    ep = Path(os.environ.get("DEXTELEOP_EPISODE", "/n/holylfs05/LABS/hankyang_lab/Lab/jackbjed/dexteleop-vla-data/canonical/rec_20260821_052219_d4f4fc76/t125.5-135_hz15"))
     if not ep.exists(): pytest.skip("canonical episode not available")
     import argparse
     args = argparse.Namespace(mode="replay", fork=None, episode=str(ep), prompt=None, host="", port=0, control_hz=15.0, interp_hz=200.0,

@@ -26,13 +26,18 @@ client at the same time (both publish `/api/*/joint_cmd`).
 - [ ] `python openpi_teleavatar/examples/teleavatar_v2/test.py` → six eye crops saved; head_left_eye 960×960, wrist eyes 400×640
 
 ## 2. Control path with KNOWN-GOOD actions (E-stop in hand)
-- [ ] `python openpi_teleavatar/examples/teleavatar_v2/zero.py` → arms ease to the home pose, exits when converged
-- [ ] replay a recorded demo at 30 % speed: `python dexteleop-vla/deploy/dexteleop_client.py --fork openpi_teleavatar --mode replay --episode <ep> --speed 0.3 --hold-right-arm --mode-confirm-replay`
+- [ ] `python openpi_teleavatar/examples/teleavatar_v2/zero.py` → arms ease to the home pose, exits when converged (proves /api/*/joint_cmd works)
+- [ ] replay a recorded demo at 30 % speed, starting from ITS start pose:
+      `python dexteleop-vla/deploy/dexteleop_client.py --fork openpi_teleavatar --mode replay --episode <ep> --go-to-start --speed 0.3 --hold-right-arm --mode-confirm-replay`
+      (`--go-to-start` eases the arms to the episode's frame-0 pose through the safety layer before replaying)
       PASS = the left arm reproduces the recorded stack (cylinders placed as in the video); grippers open/close at the right moments
 - [ ] same at `--speed 1.0`
 
 ## 3. Policy, confirm-per-chunk (E-stop in hand; objects placed as in a training demo)
 - [ ] server up; `python dexteleop-vla/deploy/dexteleop_client.py --fork openpi_teleavatar --mode confirm --prompt "Stack the red cylinder on the green cylinder." --speed 0.5 --hold-right-arm`
-      Inspect each printed chunk (max |Δq|, gripper trigger) before Enter. Reject anything with |Δq| > 0.3 rad in one chunk.
+      Use `--go-to-start --episode <ep>` so the policy starts from a pose it saw in training (the generic home pose is out of
+      distribution: in the dry run the first chunk was up to 0.44 rad from frame 0). Inspect each printed chunk (max |Δq|, gripper
+      trigger) before Enter. A large |Δq| on the FIRST chunk is expected if the start pose differs and is ramped by the safety layer;
+      from chunk 1 on, reject anything with |Δq| > 0.3 rad within one chunk.
 ## 4. Policy, auto (E-stop in hand)
 - [ ] `--mode auto --speed 0.7`, then `--speed 1.0`; 5 trials at one placement, then 3 placements × 5 trials = first success rate.

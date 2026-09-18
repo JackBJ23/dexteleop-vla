@@ -32,3 +32,4 @@ sbatch/err.*
 sbatch/.*_jid
 sbatch/.*.log
 reports/*_inspection.json
+deploy/logs/
